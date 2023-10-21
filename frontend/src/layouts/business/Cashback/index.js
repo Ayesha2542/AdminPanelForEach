@@ -20,7 +20,7 @@ function Cashback() {
   return (
     <DashboardLayout>
       <DashboardNavbar />
-      <Sidenav color="info" brandName="Billa Technologies" routes={shopRoutes} />
+      <Sidenav color="info" brandName="Billa Technologiesss" routes={shopRoutes} />
       <SoftBox py={3}>
         <Card>
           <SoftBox mb={3} px={2} mt={4}>
