@@ -2,7 +2,7 @@ import { useState } from "react";
 
 // react-router-dom components
 import { Link, useNavigate } from "react-router-dom";
-
+import Grid from "@mui/material/Grid";
 // @mui material components
 import Switch from "@mui/material/Switch";
 
@@ -35,7 +35,11 @@ function SignIn() {
     <CoverLayout
       title="Welcome back"
       description="Enter your email and password to sign in"
+
       image={pizza7}
+
+      // image={curved9}
+
     >
       <SoftBox component="form" role="form">
         <SoftBox mb={2}>
@@ -44,6 +48,7 @@ function SignIn() {
               Email
             </SoftTypography>
           </SoftBox>
+         
           <SoftInput type="email" placeholder="Email" />
         </SoftBox>
         <SoftBox mb={2}>
@@ -68,7 +73,7 @@ function SignIn() {
         <SoftBox mt={4} mb={1}>
           <SoftButton onClick={()=>{
             businessLogin();
-          }} variant="gradient" color="info" fullWidth>
+          }} variant="gradient" color="warning" fullWidth>
             sign in
           </SoftButton>
         </SoftBox>
@@ -79,7 +84,7 @@ function SignIn() {
               component={Link}
               to="/authentication/sign-up"
               variant="button"
-              color="info"
+              color="warning"
               fontWeight="medium"
               textGradient
             >
