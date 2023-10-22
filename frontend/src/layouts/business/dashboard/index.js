@@ -21,9 +21,10 @@ function Dashboard() {
       <DashboardNavbar />
       <Sidenav
         color="info"
-        brandName="Billa Technologies"
+        brandName="Food For Each"
         routes={shopRoutes}       
       /> 
+       
       <SoftBox py={3}>
         <SoftBox mb={3}>
           <Grid container spacing={3}>
@@ -32,7 +33,7 @@ function Dashboard() {
                 title={{ text: "today's money" }}
                 count="$53,000"
                 percentage={{ color: "success", text: "+55%" }}
-                icon={{ color: "info", component: "paid" }}
+                icon={{ color: "warning", component: "paid" }}
               />
             </Grid>
             <Grid item xs={12} sm={6} xl={3}>
@@ -40,7 +41,7 @@ function Dashboard() {
                 title={{ text: "today's users" }}
                 count="2,300"
                 percentage={{ color: "success", text: "+3%" }}
-                icon={{ color: "info", component: "public" }}
+                icon={{ color: "warning", component: "public" }}
               />
             </Grid>
             <Grid item xs={12} sm={6} xl={3}>
@@ -48,7 +49,7 @@ function Dashboard() {
                 title={{ text: "new clients" }}
                 count="+3,462"
                 percentage={{ color: "error", text: "-2%" }}
-                icon={{ color: "info", component: "emoji_events" }}
+                icon={{ color: "warning", component: "emoji_events" }}
               />
             </Grid>
             <Grid item xs={12} sm={6} xl={3}>
@@ -57,7 +58,7 @@ function Dashboard() {
                 count="$103,430"
                 percentage={{ color: "success", text: "+5%" }}
                 icon={{
-                  color: "info",
+                  color: "warning",
                   component: "shopping_cart",
                 }}
               />

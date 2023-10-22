@@ -10,7 +10,7 @@ import { FaList,FaWallet,FaUser,FaFirstOrder,FaQrcode,FaCalendar,FaMoneyBill,FaE
 
 const shopRoutes = [
   
-  { type: "title", title: "Restaurant Management", key: "resmgt" },
+  { type: "title", title: "Food For Each Management", key: "resmgt" },
   {
     type: "collapse",
     name: "Sub admins",
@@ -46,7 +46,7 @@ const shopRoutes = [
     component: <SignIn />,
     noCollapse: true,
   },
-  { type: "title", title: "Menu & Cashback", key: "m&cb" },  
+  { type: "title", title: "Restaurant Management", key: "m&cb" },  
   {
     type: "collapse",
     name: "Menu",
@@ -56,16 +56,16 @@ const shopRoutes = [
     component: <BusinessMenu />,
     noCollapse: true,
   },
-  {
-    type: "collapse",
-    name: "Cashback",
-    key: "cashback",
-    route: "/cashback",
-    icon: <FaMoneyBill size="14px" />,
-    component: <Cashback />,
-    noCollapse: true,
-  },
-  { type: "title", title: "Orders & Reservations", key: "m&cb" },  
+  // {
+  //   type: "collapse",
+  //   name: "Cashback",
+  //   key: "cashback",
+  //   route: "/cashback",
+  //   icon: <FaMoneyBill size="14px" />,
+  //   component: <Cashback />,
+  //   noCollapse: true,
+  // },
+ 
   {
     type: "collapse",
     name: "Orders",

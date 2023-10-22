@@ -97,7 +97,7 @@ CoverLayout.defaultProps = {
   header: "",
   title: "",
   description: "",
-  color: "info",
+  color: "warning",
   top: 20,
 };
 
