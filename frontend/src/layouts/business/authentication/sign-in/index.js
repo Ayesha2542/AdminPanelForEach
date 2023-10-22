@@ -17,6 +17,7 @@ import CoverLayout from "layouts/business/authentication/components/CoverLayout"
 
 // Images
 import curved9 from "assets/images/curved-images/curved-6.jpg";
+import pizza7 from "assets/images/pizza7.jpeg";
 
 function SignIn() {
   const [rememberMe, setRememberMe] = useState(false);
@@ -34,7 +35,7 @@ function SignIn() {
     <CoverLayout
       title="Welcome back"
       description="Enter your email and password to sign in"
-      image={curved9}
+      image={pizza7}
     >
       <SoftBox component="form" role="form">
         <SoftBox mb={2}>
@@ -71,7 +72,7 @@ function SignIn() {
             sign in
           </SoftButton>
         </SoftBox>
-        <SoftBox mt={3} textAlign="center">
+        {/* <SoftBox mt={3} textAlign="center">
           <SoftTypography variant="button" color="text" fontWeight="regular">
             Don&apos;t have an account?{" "}
             <SoftTypography
@@ -85,7 +86,7 @@ function SignIn() {
               Sign up
             </SoftTypography>
           </SoftTypography>
-        </SoftBox>
+        </SoftBox> */}
       </SoftBox>
     </CoverLayout>
   );
