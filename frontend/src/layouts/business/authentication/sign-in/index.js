@@ -16,7 +16,7 @@ import SoftButton from "components/SoftButton";
 import CoverLayout from "layouts/business/authentication/components/CoverLayout";
 
 // Images
-import curved9 from "assets/images/curved-images/curved-6.jpg";
+import curved9 from "assets/images/curved-images/curved-4.png";
 
 function SignIn() {
   const [rememberMe, setRememberMe] = useState(false);
