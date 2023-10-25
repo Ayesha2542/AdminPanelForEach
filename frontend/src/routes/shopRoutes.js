@@ -1,12 +1,13 @@
 // Soft UI Dashboard React icons
 import Shop from "examples/Icons/Shop";
-import BusinessMenu from "layouts/business/BusinessMenu";
+import Restaurants from "layouts/business/Restaurants";
 import Cashback from "layouts/business/Cashback";
 import SignIn from "layouts/business/authentication/sign-in";
 import Customer from "layouts/business/customer";
 import Earning from "layouts/business/earning";
 import SubAdmin from "layouts/business/subadmin";
 import { FaList,FaWallet,FaUser,FaFirstOrder,FaQrcode,FaCalendar,FaMoneyBill,FaEdit } from 'react-icons/fa';
+import Orders from "layouts/business/orders";
 
 const shopRoutes = [
   
@@ -49,11 +50,11 @@ const shopRoutes = [
   { type: "title", title: "Restaurant Management", key: "m&cb" },  
   {
     type: "collapse",
-    name: "Menu",
-    key: "menu",
-    route: "/menu",
+    name: "Restaurants",
+    key: "Restaurants",
+    route: "/Restaurants",
     icon: <FaList size="14px" />,
-    component: <BusinessMenu />,
+    component: <Restaurants />,
     noCollapse: true,
   },
   // {
@@ -72,7 +73,7 @@ const shopRoutes = [
     key: "orders",
     route: "/orders",
     icon: <FaFirstOrder size="18px" />,
-    component: <SignIn />,
+    component: <Orders />,
     noCollapse: true,
   },
   {
@@ -84,25 +85,25 @@ const shopRoutes = [
     component: <SignIn />,
     noCollapse: true,
   },
-  { type: "title", title: "QR Codes & Coins", key: "m&cb" },  
-  {
-    type: "collapse",
-    name: "QR Codes",
-    key: "qrcodes",
-    route: "/qrcodes",
-    icon: <FaQrcode size="18px" />,
-    component: <SignIn />,
-    noCollapse: true,
-  },
-  {
-    type: "collapse",
-    name: "Coins",
-    key: "coins",
-    route: "/coins",
-    icon: <FaCalendar size="14px" />,
-    component: <SignIn />,
-    noCollapse: true,
-  },
+  // { type: "title", title: "QR Codes & Coins", key: "m&cb" },  
+  // {
+  //   type: "collapse",
+  //   name: "QR Codes",
+  //   key: "qrcodes",
+  //   route: "/qrcodes",
+  //   icon: <FaQrcode size="18px" />,
+  //   component: <SignIn />,
+  //   noCollapse: true,
+  // },
+  // {
+  //   type: "collapse",
+  //   name: "Coins",
+  //   key: "coins",
+  //   route: "/coins",
+  //   icon: <FaCalendar size="14px" />,
+  //   component: <SignIn />,
+  //   noCollapse: true,
+  // },
   
 ];
 
