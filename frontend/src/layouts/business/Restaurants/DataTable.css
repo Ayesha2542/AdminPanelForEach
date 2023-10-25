@@ -5,10 +5,10 @@
   }
   
   .data-table th, .data-table td {
-    text-align: left;
+    text-align: center;
     padding: 8px;
     border-bottom: 1px solid #dddddd; /* Add a border at the bottom of each row */
-   
+   font-size:13px;
   }
   .data-table img {
     border-radius: 50%; /* Add a border radius to create a circular profile image */

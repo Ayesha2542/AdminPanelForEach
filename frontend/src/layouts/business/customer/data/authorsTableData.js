@@ -65,16 +65,12 @@ const authorsTableData = {
         </SoftTypography>
       ),
       action: (
-        <SoftTypography
-          component="a"
-          href="#"
-          variant="caption"
-          color="secondary"
-          fontWeight="medium"
-        >
-          Edit
-        </SoftTypography>
-      ),
+        <>
+        <button style={{backgroundColor:"green",padding:"5px 10px",color: "#fff",borderRadius:"4px",cursor:"pointer",margin:"5px",border:"none"}}>Activate</button>
+        <button style={{backgroundColor:"red",padding:"5px 10px",color: "#fff",borderRadius:"4px",cursor:"pointer",margin:"5px",border:"none"}}>Dactivate</button>
+        <button style={{backgroundColor:"orange",padding:"5px 10px",color: "#fff",borderRadius:"4px",cursor:"pointer",margin:"5px",border:"none"}}>Delete</button>
+        </>
+        ),
     },
     {
       customer: <Author image={team3} name="Alexa Liras" email="alexa@creative-tim.com" />,
@@ -89,11 +85,11 @@ const authorsTableData = {
       ),
       action: (
         <>
-     < FaCross size="14px" />
-     <FaRegTrashAlt size="14px" />
-     <FaRegTrashAlt size="14px" />
+        <button style={{backgroundColor:"green",padding:"5px 10px",color: "#fff",borderRadius:"4px",cursor:"pointer",margin:"5px",border:"none"}}>Activate</button>
+        <button style={{backgroundColor:"red",padding:"5px 10px",color: "#fff",borderRadius:"4px",cursor:"pointer",margin:"5px",border:"none"}}>Dactivate</button>
+        <button style={{backgroundColor:"orange",padding:"5px 10px",color: "#fff",borderRadius:"4px",cursor:"pointer",margin:"5px",border:"none"}}>Delete</button>
         </>
-      ),
+        ),
     },
     {
       customer: <Author image={team4} name="Laurent Perrier" email="laurent@creative-tim.com" />,
@@ -107,16 +103,12 @@ const authorsTableData = {
         </SoftTypography>
       ),
       action: (
-        <SoftTypography
-          component="a"
-          href="#"
-          variant="caption"
-          color="secondary"
-          fontWeight="medium"
-        >
-          Edit
-        </SoftTypography>
-      ),
+        <>
+        <button style={{backgroundColor:"green",padding:"5px 10px",color: "#fff",borderRadius:"4px",cursor:"pointer",margin:"5px",border:"none"}}>Activate</button>
+        <button style={{backgroundColor:"red",padding:"5px 10px",color: "#fff",borderRadius:"4px",cursor:"pointer",margin:"5px",border:"none"}}>Dactivate</button>
+        <button style={{backgroundColor:"orange",padding:"5px 10px",color: "#fff",borderRadius:"4px",cursor:"pointer",margin:"5px",border:"none"}}>Delete</button>
+        </>
+        ),
     },
     {
       customer: <Author image={team3} name="Michael Levi" email="michael@creative-tim.com" />,
@@ -130,16 +122,13 @@ const authorsTableData = {
         </SoftTypography>
       ),
       action: (
-        <SoftTypography
-          component="a"
-          href="#"
-          variant="caption"
-          color="secondary"
-          fontWeight="medium"
-        >
-          Edit
-        </SoftTypography>
-      ),
+        <>
+        <button style={{backgroundColor:"green",padding:"5px 10px",color: "#fff",borderRadius:"4px",cursor:"pointer",margin:"5px",border:"none"}}>Activate</button>
+        <button style={{backgroundColor:"red",padding:"5px 10px",color: "#fff",borderRadius:"4px",cursor:"pointer",margin:"5px",border:"none"}}>Dactivate</button>
+        <button style={{backgroundColor:"orange",padding:"5px 10px",color: "#fff",borderRadius:"4px",cursor:"pointer",margin:"5px",border:"none"}}>Delete</button>
+        </>
+        ),
+   
     }
   ],
 };

@@ -23,7 +23,7 @@ const data = [
     email: "john@gmail.com",
     location: "Satellite Town",
     buttons: [
-      { label: "Edit", backgroundColor: "#3498db" },
+      // { label: "Edit", backgroundColor: "#3498db" },
       { label: "Activate", backgroundColor: "green" },
       { label: "Deactivate", backgroundColor: "red" },
       { label: "Delete", backgroundColor: "orange" },
@@ -37,7 +37,7 @@ const data = [
     email: "smith@gmail.com",
     location: "Model Town",
     buttons: [
-      { label: "Edit", backgroundColor: "#3498db" },
+      // { label: "Edit", backgroundColor: "#3498db" },
       { label: "Activate", backgroundColor: "green" },
       { label: "Deactivate", backgroundColor: "red" },
       { label: "Delete", backgroundColor: "orange" },
@@ -51,7 +51,7 @@ const data = [
     email: "bob@gmail.com",
     location: "Rahwali",
     buttons: [
-      { label: "Edit", backgroundColor: "#3498db" },
+      // { label: "Edit", backgroundColor: "#3498db" },
       { label: "Activate", backgroundColor: "green" },
       { label: "Deactivate", backgroundColor: "red" },
       { label: "Delete", backgroundColor: "orange" },
