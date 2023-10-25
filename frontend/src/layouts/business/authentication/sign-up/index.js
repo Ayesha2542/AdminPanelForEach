@@ -16,8 +16,7 @@ Coded by www.creative-tim.com
 import { useState } from "react";
 
 // react-router-dom components
-import { Link } from "react-router-dom";
-
+import { Link, useNavigate } from "react-router-dom";
 // @mui material components
 import Card from "@mui/material/Card";
 import Checkbox from "@mui/material/Checkbox";
@@ -32,31 +31,38 @@ import SoftButton from "components/SoftButton";
 import BasicLayout from "layouts/business/authentication/components/BasicLayout";
 import Socials from "layouts/business/authentication/components/Socials";
 import Separator from "layouts/business/authentication/components/Separator";
-
+import Sidenav from "examples/Sidenav";
 // Images
-import curved6 from "assets/images/curved-images/curved14.jpg";
-
+import curved6 from "assets/images/curved-images/curved2.jpg";
+import shopRoutes from "routes/shopRoutes";
 function SignUp() {
+  const navigate = useNavigate();
   const [agreement, setAgremment] = useState(true);
 
   const handleSetAgremment = () => setAgremment(!agreement);
+  const businessLogin = () => {
+   
+    navigate('/subAdmins');
+ }
 
   return (
+    
     <BasicLayout
       title="Welcome!"
       description="Use these awesome forms to login or create new account in your project for free."
       image={curved6}
     >
+       
       <Card>
         <SoftBox p={3} mb={1} textAlign="center">
           <SoftTypography variant="h5" fontWeight="medium">
-            Register with
+            Add New SubAdmin
           </SoftTypography>
         </SoftBox>
-        <SoftBox mb={2}>
+        {/* <SoftBox mb={2}>
           <Socials />
         </SoftBox>
-        <Separator />
+        <Separator /> */}
         <SoftBox pt={2} pb={3} px={3}>
           <SoftBox component="form" role="form">
             <SoftBox mb={2}>
@@ -65,10 +71,10 @@ function SignUp() {
             <SoftBox mb={2}>
               <SoftInput type="email" placeholder="Email" />
             </SoftBox>
-            <SoftBox mb={2}>
-              <SoftInput type="password" placeholder="Password" />
-            </SoftBox>
-            <SoftBox display="flex" alignItems="center">
+            {/* <SoftBox mb={2}>
+              <SoftInput type="function" placeholder="function" />
+            </SoftBox> */}
+            {/* <SoftBox display="flex" alignItems="center">
               <Checkbox checked={agreement} onChange={handleSetAgremment} />
               <SoftTypography
                 variant="button"
@@ -87,13 +93,15 @@ function SignUp() {
               >
                 Terms and Conditions
               </SoftTypography>
-            </SoftBox>
+            </SoftBox> */}
             <SoftBox mt={4} mb={1}>
-              <SoftButton variant="gradient" color="dark" fullWidth>
-                sign up
+              <SoftButton onClick={()=>{
+            businessLogin();
+          }} variant="gradient" color="dark" fullWidth>
+                Add
               </SoftButton>
             </SoftBox>
-            <SoftBox mt={3} textAlign="center">
+            {/* <SoftBox mt={3} textAlign="center">
               <SoftTypography variant="button" color="text" fontWeight="regular">
                 Already have an account?&nbsp;
                 <SoftTypography
@@ -107,7 +115,7 @@ function SignUp() {
                   Sign in
                 </SoftTypography>
               </SoftTypography>
-            </SoftBox>
+            </SoftBox> */}
           </SoftBox>
         </SoftBox>
       </Card>

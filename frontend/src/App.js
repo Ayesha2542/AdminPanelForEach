@@ -24,6 +24,7 @@ import SignIn from "layouts/business/authentication/sign-in";
 import NotFound from "layouts/error/NotFound";
 import routes from "routes/routes";
 import shopRoutes from "routes/shopRoutes";
+import SubAdminForm from "layouts/business/SubAdminForm";
 
 
 export default function App() {
@@ -68,7 +69,7 @@ export default function App() {
     <Route path="/" element={<SignIn />} />
     <Route path="/signup" element={<SignUp />} />
     <Route path="/notfound" element={<NotFound />} />
-    
+    <Route path="/SubAdminForm" element={<SubAdminForm/>} />
     {getRoutes(routes)}
     {getRoutes(shopRoutes)}
     <Route path="*" element={<Navigate to="/notfound" />} />

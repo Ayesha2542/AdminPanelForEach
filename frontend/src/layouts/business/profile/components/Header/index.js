@@ -39,8 +39,8 @@ import Settings from "examples/Icons/Settings";
 import breakpoints from "assets/theme/base/breakpoints";
 
 // Images
-import burceMars from "assets/images/bruce-mars.jpg";
-import curved0 from "assets/images/curved-images/curved0.jpg";
+import burceMars from "assets/images/marie.jpg";
+import curved0 from "assets/images/curved-images/curved3.jpg";
 
 function Header() {
   const [tabsOrientation, setTabsOrientation] = useState("horizontal");
@@ -80,8 +80,8 @@ function Header() {
         sx={{
           backgroundImage: ({ functions: { rgba, linearGradient }, palette: { gradients } }) =>
             `${linearGradient(
-              rgba(gradients.info.main, 0.6),
-              rgba(gradients.info.state, 0.6)
+              rgba(gradients.info.main, 0.2),
+              rgba(gradients.info.state, 0.2)
             )}, url(${curved0})`,
           backgroundSize: "cover",
           backgroundPosition: "50%",
@@ -113,7 +113,7 @@ function Header() {
           <Grid item>
             <SoftBox height="100%" mt={0.5} lineHeight={1}>
               <SoftTypography variant="h5" fontWeight="medium">
-                Alex Thompson
+                Ayesha
               </SoftTypography>
               <SoftTypography variant="button" color="text" fontWeight="medium">
                 CEO / Co-Founder
@@ -122,7 +122,7 @@ function Header() {
           </Grid>
           <Grid item xs={12} md={6} lg={4} sx={{ ml: "auto" }}>
             <AppBar position="static">
-              <Tabs
+              {/* <Tabs
                 orientation={tabsOrientation}
                 value={tabValue}
                 onChange={handleSetTabValue}
@@ -131,7 +131,7 @@ function Header() {
                 <Tab label="App" icon={<Cube />} />
                 <Tab label="Message" icon={<Document />} />
                 <Tab label="Settings" icon={<Settings />} />
-              </Tabs>
+              </Tabs> */}
             </AppBar>
           </Grid>
         </Grid>

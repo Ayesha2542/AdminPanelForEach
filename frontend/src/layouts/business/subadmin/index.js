@@ -1,6 +1,6 @@
 // @mui material components
 import Card from "@mui/material/Card";
-
+import { Link, useNavigate } from "react-router-dom";
 // Soft UI Dashboard React components
 import SoftBox from "components/SoftBox";
 import SoftTypography from "components/SoftTypography";
@@ -19,15 +19,20 @@ import shopRoutes from "routes/shopRoutes";
 // import projectsTableData from "./data/projectsTableData";
 
 function SubAdmin() {
+  const navigate = useNavigate();
   const { columns, rows } = authorsTableData;
   // const { columns: prCols, rows: prRows } = projectsTableData;
+  const businessLogin = () => {
+   
+    navigate('/SubAdminForm');
+ }
 
   return (
     <DashboardLayout>
       <DashboardNavbar />
       <Sidenav
         color="info"
-        brandName="Billa Technologies"
+        brandName="Food For Each"
         routes={shopRoutes}       
       /> 
       <SoftBox py={3}>
@@ -35,12 +40,14 @@ function SubAdmin() {
           <Card>
             <SoftBox display="flex" justifyContent="space-between" alignItems="center" p={3}>
               <SoftTypography variant="h6">SubAdmins List</SoftTypography>
-              <SoftButton onClick={()=>{
+             
+              <SoftBox mt={2} mb={1}>
+          <SoftButton onClick={()=>{
             businessLogin();
-          }} variant="gradient" color="warning" halfWidth>
-           
-            + Add New 
+          }} variant="gradient" color="warning" fullWidth>
+            + SubAdmin
           </SoftButton>
+        </SoftBox>
             </SoftBox>
             <SoftBox
               sx={{ 

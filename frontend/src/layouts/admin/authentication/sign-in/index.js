@@ -62,12 +62,15 @@ function SignIn() {
             sign in
           </SoftButton>
         </SoftBox>
+        <SoftButton variant="gradient" color="info" fullWidth>
+            sign in
+          </SoftButton>
         <SoftBox mt={3} textAlign="center">
           <SoftTypography variant="button" color="text" fontWeight="regular">
             Don&apos;t have an account?{" "}
             <SoftTypography
               component={Link}
-              to="/authentication/sign-up"
+              to="/"
               variant="button"
               color="info"
               fontWeight="medium"

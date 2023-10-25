@@ -29,7 +29,8 @@ import PageLayout from "examples/LayoutContainers/PageLayout";
 
 // Authentication layout components
 import Footer from "layouts/business/authentication/components/Footer";
-
+import shopRoutes from "routes/shopRoutes";
+import Sidenav from "examples/Sidenav";
 function CoverLayout({ color, header, title, description, image, top, children }) {
   return (
     <PageLayout background="white">
@@ -41,6 +42,11 @@ function CoverLayout({ color, header, title, description, image, top, children }
           margin: 0,
         }}
       >
+        {/* <Sidenav
+        // color="warning"
+        brandName="Food For Each"
+        routes={shopRoutes}       
+      />  */}
         <Grid item xs={11} sm={8} md={5} xl={3}>
           <SoftBox mt={top}>
             <SoftBox pt={3} px={3}>
@@ -67,16 +73,16 @@ function CoverLayout({ color, header, title, description, image, top, children }
             height="100%"
             display={{ xs: "none", md: "block" }}
             position="relative"
-            right={{ md: "-12rem", xl: "-16rem" }}
+            right={{ md: "-6rem", xl: "-4rem" }}
             mr={-16}
             sx={{
-              transform: "skewX(-10deg)",
+              transform: "skewX(-4deg)",
               overflow: "hidden",
               borderBottomLeftRadius: ({ borders: { borderRadius } }) => borderRadius.lg,
             }}
           >
             <SoftBox
-              ml={-8}
+              ml={0}
               height="100%"
               sx={{
                 backgroundImage: `url(${image})`,

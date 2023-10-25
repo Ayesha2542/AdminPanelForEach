@@ -19,7 +19,7 @@ function Earning() {
   return (
     <DashboardLayout>
       <DashboardNavbar />
-      <Sidenav color="warning" brandName="Billa Technologies" routes={shopRoutes} />
+      <Sidenav color="warning" brandName="Food For Each" routes={shopRoutes} />
       <SoftBox py={3}>
         <SoftBox mb={3}>
           <Grid container spacing={3}>
