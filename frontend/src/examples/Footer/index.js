@@ -84,9 +84,9 @@ function Footer({ company, links }) {
 
 // Setting default values for the props of Footer
 Footer.defaultProps = {
-  company: { href: "https://www.creative-tim.com/", name: "Billa Tech" },
+  company: { href: "https://www.creative-tim.com/", name: "Food For Each" },
   links: [
-    { href: "https://www.creative-tim.com/", name: "Billa Tech" },
+    { href: "https://www.creative-tim.com/", name: "Food For Each" },
     { href: "https://www.creative-tim.com/presentation", name: "About Us" },
     { href: "https://www.creative-tim.com/blog", name: "Blog" },
     { href: "https://www.creative-tim.com/license", name: "License" },
