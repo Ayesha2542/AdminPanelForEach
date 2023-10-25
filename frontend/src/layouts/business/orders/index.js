@@ -20,7 +20,7 @@ const data = [
     id: 1,
     profileImage: "https://media.timeout.com/images/106000654/750/422/image.jpg",
     name: "siddiqi restaurant",
-    email: "john@email.com",
+    email: "john@gmail.com",
     location: "Satellite Town",
     buttonLabel: "View Orders",
     buttonBackgroundColor: "green",
@@ -61,12 +61,8 @@ function Orders() {
             <SoftBox display="flex" justifyContent="space-between" alignItems="center" p={3}>
               <SoftTypography variant="h6">Restaurants List</SoftTypography>
             </SoftBox>
-            {/* <SoftTypography ml={10}>Restaurants </SoftTypography> */}
             <div>
-              {/* <h2>Employee Data</h2> */}
               <Table className="data-table">
-                {" "}
-                {/* Add a CSS class for styling */}
                 <thead>
                   <tr>
                     <th>Restaurants</th>
@@ -78,25 +74,32 @@ function Orders() {
                   </tr>
                 </thead>
                 <tbody>
-        {data.map((item) => (
-          <tr key={item.id}>
-            <td><img src={item.profileImage} alt="Profile Image" height={50} width={50}/></td>
-            <td>{item.id}</td>
-            <td>{item.name}</td>
-            <td><a href={`mailto:${item.email}`}>{item.email}</a></td>
-            <td>{item.location}</td>
-            <td className="button-column">
-                   <button
-                   className="button"
-                   style={{ backgroundColor: item.buttonBackgroundColor }}
-                 >
-                   {item.buttonLabel}
-                 </button>
-             
-            </td>
-          </tr>
-        ))}
-      </tbody>
+                  {data.map((item) => (
+                    <tr key={item.id}>
+                      <td>
+                        <img
+                          src={item.profileImage}
+                          alt="Profile Image"
+                          style={{ marginLeft: 25, height: 50, width: 50 }}
+                        />
+                      </td>
+                      <td>{item.id}</td>
+                      <td>{item.name}</td>
+                      <td>
+                        <a href={`mailto:${item.email}`}>{item.email}</a>
+                      </td>
+                      <td>{item.location}</td>
+                      <td className="button-column">
+                        <button
+                          className="button"
+                          style={{ backgroundColor: item.buttonBackgroundColor }}
+                        >
+                          {item.buttonLabel}
+                        </button>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
               </Table>
             </div>
           </Card>
