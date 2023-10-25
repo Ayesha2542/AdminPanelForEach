@@ -1,7 +1,7 @@
 // Soft UI Dashboard React icons
 import Shop from "examples/Icons/Shop";
 import BusinessMenu from "layouts/business/BusinessMenu";
-import Cashback from "layouts/business/Cashback";
+import SubAdminForm from "layouts/business/SubAdminForm";
 import SignIn from "layouts/business/authentication/sign-in";
 import Customer from "layouts/business/customer";
 import Earning from "layouts/business/earning";
@@ -58,11 +58,11 @@ const shopRoutes = [
   },
   // {
   //   type: "collapse",
-  //   name: "Cashback",
-  //   key: "cashback",
-  //   route: "/cashback",
+  //   name: "SubAdminForm",
+  //   key: "SubAdminForm",
+  //   route: "/SubAdminForm",
   //   icon: <FaMoneyBill size="14px" />,
-  //   component: <Cashback />,
+  //   component: <SubAdminForm />,
   //   noCollapse: true,
   // },
  
@@ -84,25 +84,25 @@ const shopRoutes = [
     component: <SignIn />,
     noCollapse: true,
   },
-  { type: "title", title: "QR Codes & Coins", key: "m&cb" },  
-  {
-    type: "collapse",
-    name: "QR Codes",
-    key: "qrcodes",
-    route: "/qrcodes",
-    icon: <FaQrcode size="18px" />,
-    component: <SignIn />,
-    noCollapse: true,
-  },
-  {
-    type: "collapse",
-    name: "Coins",
-    key: "coins",
-    route: "/coins",
-    icon: <FaCalendar size="14px" />,
-    component: <SignIn />,
-    noCollapse: true,
-  },
+  // { type: "title", title: "QR Codes & Coins", key: "m&cb" },  
+  // {
+  //   type: "collapse",
+  //   name: "QR Codes",
+  //   key: "qrcodes",
+  //   route: "/qrcodes",
+  //   icon: <FaQrcode size="18px" />,
+  //   component: <SignIn />,
+  //   noCollapse: true,
+  // },
+  // {
+  //   type: "collapse",
+  //   name: "Coins",
+  //   key: "coins",
+  //   route: "/coins",
+  //   icon: <FaCalendar size="14px" />,
+  //   component: <SignIn />,
+  //   noCollapse: true,
+  // },
   
 ];
 

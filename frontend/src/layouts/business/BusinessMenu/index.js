@@ -19,7 +19,7 @@ function BusinessMenu() {
   return (
     <DashboardLayout>
       <DashboardNavbar />
-      <Sidenav color="info" brandName="Billa Technologies" routes={shopRoutes} />
+      <Sidenav color="info" brandName="Food For Each" routes={shopRoutes} />
       <SoftBox py={3}>
         
         

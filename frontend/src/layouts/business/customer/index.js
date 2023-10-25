@@ -26,7 +26,7 @@ function Customer() {
       <DashboardNavbar />
       <Sidenav
         color="info"
-        brandName="Billa Technologies"
+        brandName="Food For Each"
         routes={shopRoutes}       
       /> 
       <SoftBox py={3}>

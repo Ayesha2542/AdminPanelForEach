@@ -29,10 +29,14 @@ import PageLayout from "examples/LayoutContainers/PageLayout";
 
 // Authentication layout components
 import Footer from "layouts/business/authentication/components/Footer";
+import Sidenav from "examples/Sidenav";
+
+import shopRoutes from "routes/shopRoutes";
 
 function BasicLayout({ title, description, image, children }) {
   return (
     <PageLayout>
+       
       <DefaultNavbar
         action={{
           type: "external",
@@ -42,14 +46,20 @@ function BasicLayout({ title, description, image, children }) {
         transparent
         light
       />
+      <Sidenav
+        color="info"
+        brandName="Food For Each"
+        routes={shopRoutes}       
+      /> 
       <SoftBox
-        width="calc(100% - 2rem)"
+        width="calc(70% - 10rem)"
         minHeight="50vh"
         borderRadius="lg"
         mx={2}
         my={2}
         pt={6}
         pb={28}
+      
         sx={{
           backgroundImage: ({ functions: { linearGradient, rgba }, palette: { gradients } }) =>
             image &&
@@ -65,7 +75,7 @@ function BasicLayout({ title, description, image, children }) {
         <Grid container spacing={3} justifyContent="center" sx={{ textAlign: "center" }}>
           <Grid item xs={10} lg={4}>
             <SoftBox mt={6} mb={1}>
-              <SoftTypography variant="h1" color="white" fontWeight="bold">
+              <SoftTypography variant="h6" color="white" fontWeight="bold">
                 {title}
               </SoftTypography>
             </SoftBox>
