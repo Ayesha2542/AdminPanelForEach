@@ -70,7 +70,8 @@ function CoverLayout({ color, header, title, description, image, top, children }
         </Grid>
         <Grid item xs={12} md={5}>
           <SoftBox
-            height="100%"
+            height="78%"
+            mt={11}
             display={{ xs: "none", md: "block" }}
             position="relative"
             right={{ md: "-6rem", xl: "-4rem" }}
