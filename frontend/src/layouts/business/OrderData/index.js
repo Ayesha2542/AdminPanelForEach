@@ -320,7 +320,7 @@ function OrderData() {
                       <td className="button-column">
                         <button
                           onClick={() => {
-                            navigate(`/OrderData`);
+                            // navigate(`/OrderData`);
                           }}
                           className="button"
                           style={{ backgroundColor: item.buttonBackgroundColor }}
