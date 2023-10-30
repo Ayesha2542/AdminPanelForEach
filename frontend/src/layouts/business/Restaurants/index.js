@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import Grid from "@mui/material/Grid";
 // Soft UI Dashboard React components
 import SoftBox from "components/SoftBox";
-import "./DataTable.css"; // Import your CSS file
+import "./restaurantDataTable.css"; // Import your CSS file
 // Soft UI Dashboard React examples
 import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
 import DashboardNavbar from "examples/Navbars/DashboardNavbar";
@@ -15,54 +15,54 @@ import SoftInput from "components/SoftInput";
 import { Card, Table } from "@mui/material";
 import pizza7 from "assets/images/pizza7.jpeg";
 
-const data = [
-  {
-    id: 1,
-    profileImage: "https://media.timeout.com/images/106000654/750/422/image.jpg",
-    name: "siddiqi restaurant",
-    email: "john@gmail.com",
-    location: "Satellite Town",
-    buttons: [
-      // { label: "Edit", backgroundColor: "#3498db" },
-      { label: "Activate", backgroundColor: "green" },
-      { label: "Deactivate", backgroundColor: "red" },
-      { label: "Delete", backgroundColor: "orange" },
-    ],
-  },
-  {
-    id: 2,
-    profileImage:
-      "https://assets.cntraveller.in/photos/63d8e5103d7229d4cf308f01/16:9/w_1920,h_1080,c_limit/Prequel-lead.jpg",
-    name: "Hameed Restaurant",
-    email: "smith@gmail.com",
-    location: "Model Town",
-    buttons: [
-      // { label: "Edit", backgroundColor: "#3498db" },
-      { label: "Activate", backgroundColor: "green" },
-      { label: "Deactivate", backgroundColor: "red" },
-      { label: "Delete", backgroundColor: "orange" },
-    ],
-  },
-  {
-    id: 3,
-    profileImage:
-      "https://cdn-v2.theculturetrip.com/1200x900/wp-content/uploads/2022/12/louis-hansel-rheovfxoloa-unsplash.jpg",
-    name: " Middle Eastern",
-    email: "bob@gmail.com",
-    location: "Rahwali",
-    buttons: [
-      // { label: "Edit", backgroundColor: "#3498db" },
-      { label: "Activate", backgroundColor: "green" },
-      { label: "Deactivate", backgroundColor: "red" },
-      { label: "Delete", backgroundColor: "orange" },
-    ],
-  },
-  // Add more data objects as needed
-];
+
 
 function Restaurants() {
   const brand = "";
-
+  const [restaurantData,setRestaurantData] =useState( [
+    {
+      id: 1,
+      profileImage: "https://media.timeout.com/images/106000654/750/422/image.jpg",
+      name: "siddiqi restaurant",
+      email: "john@gmail.com",
+      location: "Satellite Town",
+      buttons: [
+        // { label: "Edit", backgroundColor: "#3498db" },
+        { label: "Activate", backgroundColor: "green" },
+        { label: "Deactivate", backgroundColor: "red" },
+        { label: "Delete", backgroundColor: "orange" },
+      ],
+    },
+    {
+      id: 2,
+      profileImage:
+        "https://assets.cntraveller.in/photos/63d8e5103d7229d4cf308f01/16:9/w_1920,h_1080,c_limit/Prequel-lead.jpg",
+      name: "Hameed Restaurant",
+      email: "smith@gmail.com",
+      location: "Model Town",
+      buttons: [
+        // { label: "Edit", backgroundColor: "#3498db" },
+        { label: "Activate", backgroundColor: "green" },
+        { label: "Deactivate", backgroundColor: "red" },
+        { label: "Delete", backgroundColor: "orange" },
+      ],
+    },
+    {
+      id: 3,
+      profileImage:
+        "https://cdn-v2.theculturetrip.com/1200x900/wp-content/uploads/2022/12/louis-hansel-rheovfxoloa-unsplash.jpg",
+      name: " Middle Eastern",
+      email: "bob@gmail.com",
+      location: "Rahwali",
+      buttons: [
+        // { label: "Edit", backgroundColor: "#3498db" },
+        { label: "Activate", backgroundColor: "green" },
+        { label: "Deactivate", backgroundColor: "red" },
+        { label: "Delete", backgroundColor: "orange" },
+      ],
+    },
+    // Add more data objects as needed
+  ]);
   return (
     <DashboardLayout>
       <DashboardNavbar />
@@ -74,7 +74,7 @@ function Restaurants() {
               <SoftTypography variant="h6">Restaurants List</SoftTypography>
             </SoftBox>
             <div>
-              <Table className="data-table">
+              <Table className="restaurantData-table">
                 {/* Add a CSS class for styling */}
                 <thead>
                   <tr>
@@ -87,9 +87,9 @@ function Restaurants() {
                   </tr>
                 </thead>
                 <tbody>
-        {data.map((item) => (
+        {restaurantData.map((item) => (
           <tr key={item.id}>
-            <td><img src={item.profileImage} alt="Profile Image"  style={{marginLeft:25,height:50,width:50}}/></td>
+            <td><img src={item.profileImage} alt="Profile Image"  style={{height:50,width:50,borderRadius:50}}/></td>
             <td>{item.id}</td>
             <td>{item.name}</td>
             <td><a href={`mailto:${item.email}`}>{item.email}</a></td>

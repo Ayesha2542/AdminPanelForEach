@@ -1,20 +1,18 @@
-.data-table {
+.restaurantData-table {
     width: 100%;
     border-spacing: 0;
     
   }
   
-  .data-table th, .data-table td {
+  .restaurantData-table th, .restaurantData-table td {
     text-align: center;
     padding: 8px;
     border-bottom: 1px solid #dddddd; /* Add a border at the bottom of each row */
    font-size:13px;
   }
-  .data-table img {
-    border-radius: 50%; /* Add a border radius to create a circular profile image */
-  }
+ 
 
-  .data-table button {
+  .restaurantData-table button {
     padding: 5px 10px;
     /* background-color: #3498db; */
     color: #fff;
