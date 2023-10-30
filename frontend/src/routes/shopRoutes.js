@@ -9,6 +9,7 @@ import Earning from "layouts/business/earning";
 import SubAdmin from "layouts/business/subadmin";
 import { FaList,FaWallet,FaUser,FaFirstOrder,FaQrcode,FaCalendar,FaMoneyBill,FaEdit } from 'react-icons/fa';
 import Orders from "layouts/business/orders";
+import Reservations from "layouts/business/reservations";
 
 const shopRoutes = [
   
@@ -83,7 +84,7 @@ const shopRoutes = [
     key: "reservations",
     route: "/reservations",
     icon: <FaCalendar size="14px" />,
-    component: <SignIn />,
+    component: <Reservations />,
     noCollapse: true,
   },
   // { type: "title", title: "QR Codes & Coins", key: "m&cb" },  
