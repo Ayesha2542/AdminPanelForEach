@@ -37,8 +37,12 @@ function OrderData() {
         {price:"Rs. 500"},
         {price:"Rs. 600"},
       ],
-      buttonLabel: "View Details",
-      buttonBackgroundColor: "green",
+      buttons: [
+        // { label: "Edit", backgroundColor: "#3498db" },
+        
+        { label: "Cancel Order", backgroundColor: "red" },
+        { label: "Mark as Completed", backgroundColor: "green" },
+      ],  
       totalAmount:"Rs. 1500"
     },
     {
@@ -62,8 +66,12 @@ function OrderData() {
       ],
       totalAmount:"Rs. 1500",
 
-      buttonLabel: "View Details",
-      buttonBackgroundColor: "green",
+      buttons: [
+        // { label: "Edit", backgroundColor: "#3498db" },
+        
+        { label: "Cancel Order", backgroundColor: "red" },
+        { label: "Mark as Completed", backgroundColor: "green" },
+      ],  
     },
     {
       id: 3,
@@ -86,8 +94,12 @@ function OrderData() {
       ],
       totalAmount:"Rs. 900",
 
-      buttonLabel: "View Details",
-      buttonBackgroundColor: "green",
+      buttons: [
+        // { label: "Edit", backgroundColor: "#3498db" },
+        
+        { label: "Cancel Order", backgroundColor: "red" },
+        { label: "Mark as Completed", backgroundColor: "green" },
+      ],    
     },
     // Add more data objects as needed
   ]);
@@ -114,8 +126,7 @@ function OrderData() {
         {price:"Rs. 500"},
         {price:"Rs. 600"},
       ],
-      buttonLabel: "View Details",
-      buttonBackgroundColor: "green",
+     
       totalAmount:"Rs. 1500"
     },
     {
@@ -139,8 +150,6 @@ function OrderData() {
       ],
       totalAmount:"Rs. 1500",
 
-      buttonLabel: "View Details",
-      buttonBackgroundColor: "green",
     },
     {
       id: 3,
@@ -163,8 +172,6 @@ function OrderData() {
       ],
       totalAmount:"Rs. 900",
 
-      buttonLabel: "View Details",
-      buttonBackgroundColor: "green",
     },
     // Add more data objects as needed
   ]);
@@ -189,8 +196,7 @@ function OrderData() {
         {price:"Rs. 500"},
         {price:"Rs. 600"},
       ],
-      buttonLabel: "View Details",
-      buttonBackgroundColor: "green",
+  
       totalAmount:"Rs. 1500"
     },
     {
@@ -214,8 +220,6 @@ function OrderData() {
       ],
       totalAmount:"Rs. 1500",
 
-      buttonLabel: "View Details",
-      buttonBackgroundColor: "green",
     },
     {
       id: 3,
@@ -238,8 +242,6 @@ function OrderData() {
       ],
       totalAmount:"Rs. 900",
 
-      buttonLabel: "View Details",
-      buttonBackgroundColor: "green",
     },
     // Add more data objects as needed
   ]);
@@ -317,17 +319,17 @@ function OrderData() {
               ))}
             </td>
             <td>{item.totalAmount}</td>
-                      <td className="button-column">
-                        <button
-                          onClick={() => {
-                            // navigate(`/OrderData`);
-                          }}
-                          className="button"
-                          style={{ backgroundColor: item.buttonBackgroundColor }}
-                        >
-                          {item.buttonLabel}
-                        </button>
-                      </td>
+            <td className="button-column">
+              {item.buttons.map((button, index) => (
+                <button
+                  key={index}
+                  className={`button button-${index + 1}`}
+                  style={{ backgroundColor: button.backgroundColor }}
+                >
+                  {button.label}
+                </button>
+              ))}
+            </td>
                     </tr>
                   ))}
                 </tbody>
@@ -352,7 +354,7 @@ function OrderData() {
                     <th>Price</th>
                     <th>Total Amount</th>
 
-                    <th>Action</th>
+                   
                   </tr>
                 </thead>
                 <tbody>
@@ -403,17 +405,7 @@ function OrderData() {
               ))}
             </td>
             <td>{item.totalAmount}</td>
-                      <td className="button-column">
-                        <button
-                          onClick={() => {
-                            // navigate(`/OrderData`);
-                          }}
-                          className="button"
-                          style={{ backgroundColor: item.buttonBackgroundColor }}
-                        >
-                          {item.buttonLabel}
-                        </button>
-                      </td>
+                      
                     </tr>
                   ))}
                 </tbody>
@@ -439,7 +431,7 @@ function OrderData() {
                     <th>Price</th>
                     <th>Total Amount</th>
 
-                    <th>Action</th>
+                   
                   </tr>
                 </thead>
                 <tbody>
@@ -490,17 +482,8 @@ function OrderData() {
               ))}
             </td>
             <td>{item.totalAmount}</td>
-                      <td className="button-column">
-                        <button
-                          onClick={() => {
-                            // navigate(`/OrderData`);
-                          }}
-                          className="button"
-                          style={{ backgroundColor: item.buttonBackgroundColor }}
-                        >
-                          {item.buttonLabel}
-                        </button>
-                      </td>
+                      
+                     
                     </tr>
                   ))}
                 </tbody>
