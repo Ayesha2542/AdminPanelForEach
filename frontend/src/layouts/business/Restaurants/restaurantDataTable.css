@@ -8,7 +8,7 @@
     text-align: center;
     padding: 8px;
     border-bottom: 1px solid #dddddd; /* Add a border at the bottom of each row */
-   font-size:13px;
+   /* font-size:13px; */
   }
  
 
@@ -29,4 +29,6 @@
   /* .data-table tr:nth-child(even) {
     background-color: #f2f2f2;
   } */
+
+  /*  */
   

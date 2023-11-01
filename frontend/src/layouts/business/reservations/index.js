@@ -26,12 +26,14 @@ function Reservations() {
       ],
 
       customers: [{ name: "john" }, { name: "BOb" }],
+      customerPhone: [{ phNumber: "03456789123" }, { phNumber: "03123456789" }],
       orderItems: [{ label: "pizza" }, { label: "shawarama" }, { label: "fries" }],
       itemQuantity: [{ qty: "1" }, { qty: "2" }, { qty: "4" }],
       itemPrice: [{ price: "Rs. 400" }, { price: "Rs. 500" }, { price: "Rs. 600" }],
-      buttonLabel: "View Details",
-      buttonBackgroundColor: "green",
+      // buttonLabel: "View Details",
+      // buttonBackgroundColor: "green",
       totalAmount: "Rs. 1500",
+      dateTime:"11/10/2023 at 3:01pm"
     },
     {
       id: 2,
@@ -40,13 +42,15 @@ function Reservations() {
         { profile: "https://media.timeout.com/images/106000654/750/422/image.jpg" },
       ],
       customers: [{ name: "john" }, { name: "BOb" }],
+      customerPhone: [{ phNumber: "03456789123" }, { phNumber: "03123456789" }],
       orderItems: [{ label: "burger" }, { label: "salad" }, { label: "fries" }],
       itemQuantity: [{ qty: "2" }, { qty: "1" }, { qty: "3" }],
       itemPrice: [{ price: "Rs. 400" }, { price: "Rs. 500" }, { price: "Rs. 600" }],
       totalAmount: "Rs. 1500",
 
-      buttonLabel: "View Details",
-      buttonBackgroundColor: "green",
+      // buttonLabel: "View Details",
+      // buttonBackgroundColor: "green",
+      dateTime:"11/10/2023 at 3:01pm"
     },
     {
       id: 3,
@@ -55,6 +59,7 @@ function Reservations() {
         { profile: "https://media.timeout.com/images/106000654/750/422/image.jpg" },
       ],
       customers: [{ name: "john" }, { name: "BOb" }],
+      customerPhone: [{ phNumber: "03456789123" }, { phNumber: "03123456789" }],
       orderItems: [
         { label: "pizza" },
         { label: "shawarama" },
@@ -64,8 +69,9 @@ function Reservations() {
       itemPrice: [{ price: "Rs. 400" }, { price: "Rs. 500" }],
       totalAmount: "Rs. 900",
 
-      buttonLabel: "View Details",
-      buttonBackgroundColor: "green",
+      // buttonLabel: "View Details",
+      // buttonBackgroundColor: "green",
+      dateTime:"11/10/2023 at 3:01pm"
     },
     // Add more data objects as needed
   ]);
@@ -88,12 +94,16 @@ function Reservations() {
                     <th>Customers</th>
                     <th>Order ID</th>
                     <th>Name</th>
+                    <th> PhoneNo.</th>
                     <th>Order Items</th>
                     <th>Quantity</th>
                     <th>Price</th>
                     <th>Total Amount</th>
+                    <th>Date Time</th>
+                    
 
-                    <th>Action</th>
+
+                    {/* <th>Action</th> */}
                   </tr>
                 </thead>
                 <tbody>
@@ -122,6 +132,18 @@ function Reservations() {
                             // style={{fontSize:'14px'}}
                           >
                             {customer.name}
+                          </h6>
+                        ))}
+                      </td>
+
+                      <td className="phone-column">
+                        {item.customerPhone.map((phoneNo, index) => (
+                          <h6
+                            key={index}
+                            className={`text text-${index + 1}`}
+                            // style={{fontSize:'14px'}}
+                          >
+                            {phoneNo.phNumber}
                           </h6>
                         ))}
                       </td>
@@ -161,7 +183,7 @@ function Reservations() {
                         ))}
                       </td>
                       <td>{item.totalAmount}</td>
-                      <td className="button-column">
+                      {/* <td className="button-column">
                         <button
                           onClick={() => {
                             // navigate(`/OrderData`);
@@ -171,7 +193,8 @@ function Reservations() {
                         >
                           {item.buttonLabel}
                         </button>
-                      </td>
+                      </td> */}
+                    <td>{item.dateTime}</td>
                     </tr>
                   ))}
                 </tbody>
