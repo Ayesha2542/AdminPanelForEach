@@ -55,6 +55,8 @@ function SoftUIControllerProvider({ children }) {
     openConfigurator: false,
     direction: "ltr",
     layout: "dashboard",
+    baseUrl:'http://localhost:8888'
+
   };
 
   const [controller, dispatch] = useReducer(reducer, initialState);

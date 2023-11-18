@@ -11,8 +11,23 @@ import team2 from "assets/images/team-2.jpg";
 import team3 from "assets/images/team-3.jpg";
 import team4 from "assets/images/team-4.jpg";
 import SoftButton from "components/SoftButton";
-
+import axios from 'axios';
 function Author({ image, name, email }) {
+ // Import Axios or use any other HTTP client library
+
+// Make a GET request to fetch user data
+axios.get('http://192.168.0.110:8888/users')
+  .then(response => {
+    const userData = response.data; // This will contain the user data from MongoDB
+
+    // Log the retrieved user data to the console
+    console.log('User Data:', userData);
+
+    // Now you can use this data to display it in your admin panel or perform any other actions.
+  })
+  .catch(error => {
+    console.error('Error fetching user data:', error);
+  });
   return (
     <SoftBox display="flex" alignItems="center" px={1} py={0.5}>
       <SoftBox mr={2}>

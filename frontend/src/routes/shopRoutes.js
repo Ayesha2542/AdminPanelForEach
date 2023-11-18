@@ -10,6 +10,7 @@ import SubAdmin from "layouts/business/subadmin";
 import { FaList,FaWallet,FaUser,FaFirstOrder,FaQrcode,FaCalendar,FaMoneyBill,FaEdit } from 'react-icons/fa';
 import Orders from "layouts/business/orders";
 import Reservations from "layouts/business/reservations";
+import { Fastfood } from "@mui/icons-material";
 
 const shopRoutes = [
   
@@ -55,7 +56,7 @@ const shopRoutes = [
     name: "Restaurants",
     key: "Restaurants",
     route: "/Restaurants",
-    icon: <FaList size="14px" />,
+    icon: <Fastfood size="14px" />,
     component: <Restaurants />,
     noCollapse: true,
   },
