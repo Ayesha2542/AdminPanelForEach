@@ -50,7 +50,7 @@ function SignIn() {
       formData.append("password", password);
   
       axios({
-        method:" post",
+        method:"post",
         url: `${baseUrl}/adminLogin`,
         headers: { "Content-Type": "multipart/form-data" },
         data: formData,
@@ -63,7 +63,7 @@ function SignIn() {
           }
         })
         .catch((error) => {
-          console.log("nhi hua");
+          console.log(error);
         });
     };
   

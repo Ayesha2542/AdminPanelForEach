@@ -11,10 +11,22 @@ import { FaList,FaWallet,FaUser,FaFirstOrder,FaQrcode,FaCalendar,FaMoneyBill,FaE
 import Orders from "layouts/business/orders";
 import Reservations from "layouts/business/reservations";
 import { Fastfood } from "@mui/icons-material";
+import Category from "layouts/business/Category";
+
 
 const shopRoutes = [
   
   { type: "title", title: "Food For Each Management", key: "resmgt" },
+  {
+    type: "collapse",
+    name: "Category",
+    key: "categories",
+    route: "/categories",
+    icon: <FaUser size="14px" />,
+    component: <Category />,
+    noCollapse: true,
+  },
+
   {
     type: "collapse",
     name: "Sub admins",
