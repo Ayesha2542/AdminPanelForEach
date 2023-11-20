@@ -26,7 +26,7 @@ function SubAdminForm() {
   const [controller, dispatch] = useSoftUIController();
   const { baseUrl } = controller;
 
-  const businessLogin = async () => {
+  const businessLogin =  () => {
     if (name === "" || email === "") {
       // Check if email or password is empty
      alert("Please enter both name and email.");
@@ -44,7 +44,13 @@ function SubAdminForm() {
       const formData = new FormData();
       formData.append("name", name);
       formData.append("email", email);
-
+console.log('check name',name)
+axios({
+  method: "post",  // <-- Corrected
+  url: `${baseUrl}/addSubAdmin`,
+  data: formData,
+  headers: { "Content-Type": "multipart/form-data" },
+})
       axios({
         method:"post",
         url: `${baseUrl}/addSubAdmin`,
