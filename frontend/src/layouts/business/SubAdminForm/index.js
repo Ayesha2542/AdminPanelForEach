@@ -51,7 +51,12 @@ axios({
   data: formData,
   headers: { "Content-Type": "multipart/form-data" },
 })
-
+      axios({
+        method:"post",
+        url: `${baseUrl}/addSubAdmin`,
+        data: formData,
+        headers: { "Content-Type": "multipart/form-data" },
+      })
 
       .then(function(response){
         if (response.data.save == true) {
