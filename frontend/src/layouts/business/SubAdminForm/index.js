@@ -46,7 +46,7 @@ function SubAdminForm() {
       formData.append("email", email);
 
       axios({
-        method:" post",
+        method:"post",
         url: `${baseUrl}/addSubAdmin`,
         data: formData,
         headers: { "Content-Type": "multipart/form-data" },
