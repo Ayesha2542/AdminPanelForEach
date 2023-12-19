@@ -62,7 +62,7 @@ function Category() {
           setRows([]);
           viewAllCategories();
         } else {
-          alert("some thing went wrong");
+          alert("Some thing went wrong");
         }
       })
       .catch((error) => {
